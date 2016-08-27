@@ -33,8 +33,10 @@ public class Queue<Item> {
         N++;
     }
     public Item dequeue(){
+        Node oldfirst = first;
         Item item = first.item;
         first = first.next;
+        oldfirst.next = null;
         if (isEmpty()){
             last = null;
         }

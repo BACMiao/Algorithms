@@ -10,15 +10,15 @@ import java.util.Scanner;
  */
 public class Example {
     public static void main(String[] args) {
-        Selection selection = new Selection();
+        Shell cm = new Shell();
         String[] a = new String[10];
         for (int i = 0; i < 10; i++){
             Scanner sc = new Scanner(System.in);
             a[i] = sc.nextLine();
         }
-        selection.show(a);
-        Selection.sort(a);
-        assert  selection.isSorted(a);
-        selection.show(a);
+        cm.show(a);
+        cm.sort(a);
+        assert cm.isSorted(a);
+        cm.show(a);
     }
 }
